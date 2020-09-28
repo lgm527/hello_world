@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+
+ @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+ body {
+    font-family: 'Lato', sans-serif;
+    color: #666666;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 80%;
+ }
+
+ .nav > a {
+    padding: 25px;
+ }
+
+ hr {
+   width: 100%;
+   margin: 20px;
+   border-color: #C8DAF7;
+ }
+
+ img {
+   padding: 20px;
+   padding-bottom: 0;
+ }

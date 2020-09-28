@@ -1,3 +1,20 @@
 // Place all the styles related to the Suppliers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.supplier {
+    text-align: center;
+}
+
+input {
+    border: 1px solid #666666;
+    padding: 5px;
+}
+
+label {
+    text-align: left;
+}
+
+.supplier_input {
+    padding: 5px;
+}
