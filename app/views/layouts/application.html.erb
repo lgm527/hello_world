@@ -10,6 +10,24 @@
   </head>
 
   <body>
+
+      <div class='nav'>
+
+      <%= image_tag 'banner.png', style: 'width:175px'%>
+
+      <a href='/suppliers'>
+      View All Suppliers
+      </a>
+
+      <a href='/suppliers/new'>
+      Create New Supplier
+      </a>
+
+    </div>
+
+    <hr>
+
+
     <%= yield %>
   </body>
 </html>
