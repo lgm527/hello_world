@@ -1,0 +1,62 @@
+<div class='supplier'>
+  <h1>Join the Procurated Supplier Community</h1>
+
+  <% if @supplier.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@supplier.errors.count, "error") %>
+        prohibited this supplier from joining:
+      </h2>
+  
+      <ul>
+      <% @supplier.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div id="supplier_form">
+    <%= form_for @supplier do |f| %>
+      <div class="supplier_input">
+      <%= f.label :name %>
+      <br>
+      <%= f.text_field :name, required: true %>
+      </div>
+      <div class="supplier_input">
+      <%= f.label :ein %>
+      <br>
+      <%= f.text_field :ein, required: true %>
+      </div>
+      <div class="supplier_input">
+      <%= f.label :address_1 %>
+      <br>
+      <%= f.text_field :address_1, required: true %>
+      </div>
+      <div class="supplier_input">
+      <%= f.label :address_2 %>
+      <br>
+      <%= f.text_field :address_2, required: true %>
+      </div>
+      <div class="supplier_input">
+      <%= f.label :city %>
+      <br>
+      <%= f.text_field :city, required: true %>
+      </div>
+      <div class="supplier_input">
+      <%= f.label :state %>
+      <br>
+      <%= f.text_field :state, required: true %>
+      </div>
+      <div class="supplier_input">
+      <%= f.label :phone_number %>
+      <br>
+      <%= f.text_field :phone_number, required: true %>
+      </div>
+      <div class="supplier_input">
+      <%= f.submit "SUBMIT" %>
+      </div>
+
+    <% end %>
+  </div>
+</div>

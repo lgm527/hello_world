@@ -1,0 +1,13 @@
+<div class='supplier'>
+    <h1>All Suppliers</h1>
+
+    <% @suppliers.each do |supplier| %>
+
+        <p>
+        <a href='/suppliers/<%=supplier.id%>'>
+        <%= supplier.name %>
+        </a>
+        </p>
+
+    <% end %>
+</div>
