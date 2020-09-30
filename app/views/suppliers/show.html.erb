@@ -7,3 +7,11 @@
     <li><%= @supplier.state %></li>
     <li><%= @supplier.phone_number %></li>
 </div>
+
+<a href="/suppliers/<%=@supplier.id%>/edit">
+Edit Supplier
+</a>
+
+<br></br>
+
+<%= link_to "Write a review", new_supplier_review_path(@supplier) %>

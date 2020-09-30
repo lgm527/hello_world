@@ -1,0 +1,34 @@
+<% if @review.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@review.errors.count, "error") %>
+        prohibited this review from being submitted:
+      </h2>
+  
+      <ul>
+      <% @review.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div id="review_form">
+    <%= form_for @review do |f| %>
+      <div class="review_input">
+      <%= f.label :body %>
+      <br>
+      <%= f.text_field :body, required: true %>
+      </div>
+      <div class="review_input">
+      <%= f.label :rating %>
+      <br>
+      <%= f.text_field :rating, required: true %>
+      </div>
+ 
+      <div class="review_input">
+      <%= f.submit "SUBMIT" %>
+      </div>
+
+    <% end %>
+  </div>
